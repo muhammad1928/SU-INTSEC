@@ -56,3 +56,56 @@ then this is used to modify your webpage
 open index html file using `nano index.html`
 
 `cat index.html` will show you the raw html file.
+
+
+
+LETS FIND THE FLAGS inside `docker run-it nharrand/scavenger-hunt:latest /bin/bash`
+
+lets start with creating a python clue using `python3 generate_clues.py [secret_number]` secret number is = 443323
+
+## clue number one is `man`
+man  is  the  system's  manual pager.  Each page argument given to man is normally the name of a program,   
+utility or function.  The manual page associated with each of these arguments  is  then  found  and  dis-   
+played.  A section, if provided, will direct man to look only in that section of the manual.  The default   
+action is to search in all of the available sections following a pre-defined order (see DEFAULTS), and to   
+show only the first page found, even if page exists in several sections.
+
+*1*   Executable programs or shell commands
+*2*   System calls (functions provided by the kernel)
+*3*   Library calls (functions within program libraries)
+*4*   Special files (usually found in /dev)
+*5*   File formats and conventions, e.g. /etc/passwd
+*6*   Games
+*7*   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7), man-pages(7)
+*8*   System administration commands (usually only for root)
+*9*   Kernel routines [Non standard]
+
+``man ls`` Display the manual page for the item (program) ls.
+
+``man man.7`` Display the manual page for macro package man from section 7.  (This is an  alternative  spelling  of "man 7 man".)
+
+``bash man 'man(7)'`` Display  the manual page for macro package man from section 7.  (This is another alternative spelling of "man 7 man".  It may be more convenient when copying and pasting cross-references to manual pages.
+Note that the parentheses must normally be quoted to protect them from the shell.)
+
+``man -a intro``
+    Display,  in  succession, all of the available intro manual pages contained within the manual.  It is
+    possible to quit between successive displays or skip any of them.
+
+``man -t bash | lpr -Pps``
+    Format the manual page for bash into the default troff or groff format and pipe  it  to  the  printer
+    named  ps.  The default output for groff is usually PostScript.  man --help should advise as to which
+    processor is bound to the -t option.
+
+``man -l -Tdvi ./foo.1x.gz > ./foo.1x.dvi``
+    This command will decompress and format the nroff source manual page ./foo.1x.gz into a device  inde-
+    pendent (dvi) file.  The redirection is necessary as the -T flag causes output to be directed to std-
+    out with no pager.  The output could be viewed with a program such as xdvi or further processed  into
+    PostScript using a program such as dvips.
+
+``man -k printf``
+    Search  the  short  descriptions  and manual page names for the keyword printf as regular expression.
+    Print out any matches.  Equivalent to apropos printf.
+
+``man -f smail``
+    Lookup the manual pages referenced by smail and print  out  the  short  descriptions  of  any  found.
+    Equivalent to whatis smail.
