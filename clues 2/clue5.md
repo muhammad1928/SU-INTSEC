@@ -16,4 +16,8 @@ in the `/bin/` directory. `which` itself is a program so you could try:
 #### Finding Clue 7 ####
 
 `touch` is a program that creates an empty file. Your next hint is the location of the `touch` program.
+
+/usr/bin/touch
 ubnt@10c754259c7b:~/scavenger-hunt/clues/91535$
+
+ubnt@e2817cb93251:/usr/bin/bin/touch
