@@ -12,3 +12,4 @@ crypto-helper.sh  flag_9  node_modules  package-lock.json  package.json  server.
 flag_9 is 564ffa189a52c873f94be7bcab00ef6a259435b8.
 
 This flag is readable by an attacker if something is insecure in the crypto-helper api. But that shouldn't be the case, right?
+
